@@ -4,6 +4,8 @@ import {
     Home as HomeView,
     Quiz as QuizView,
 } from './views/index';
+import { RouteWithLayout } from './components';
+import { Main } from './layouts';
 
 
 
@@ -11,12 +13,8 @@ class Routes extends React.Component {
     render() {
         return (
             <Switch>
-                <Route path="/home">
-                    <HomeView />
-                </Route>
-                <Route path="/quiz">
-                    <QuizView />
-                </Route>
+                <RouteWithLayout exact component={HomeView} layout={Main} path="/home" />
+                <RouteWithLayout exact component={QuizView} layout={Main} path="/quiz" />
             </Switch>
         )
     }
