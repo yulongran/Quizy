@@ -4,13 +4,12 @@ import Typography from '@material-ui/core/Typography';
 import { Button } from '@material-ui/core';
 
 const styles = {
-    buttonStyle: { margin: 5, backgroundColor:'red'},
+    buttonStyle: { margin: 5},
 }
 class Progress extends React.Component {
     constructor(props) {
         super(props);
     }
-
     render() {
         return (
             <div className="quiz-progress-container">
@@ -20,7 +19,7 @@ class Progress extends React.Component {
                     </Typography>
                 </div>
                 <div className="quiz-progress-tracker">
-                    <Button variant="contained" style={styles.buttonStyle} color="red">
+                    <Button variant="contained" style={styles.buttonStyle}>
                         1
                     </Button>
                     <Button variant="contained"  style={styles.buttonStyle}>

@@ -10,8 +10,8 @@ class Navigation extends React.Component {
     render() {
         return (
             <div className="quiz-navigation-container">
-                <Button variant="contained" style={{ borderRadius: 15, width: 100, height: 40, marginLeft: 5, marginRight: 5 }}>PREVIOUS</Button>
-                <Button variant="contained" style={{ borderRadius: 15, width: 100, height: 40, marginLeft: 5, marginRight: 5 }}>NEXT</Button>
+                 <Button variant="contained" onClick={this.props.onPressPrevious} style={{ borderRadius: 15, width: 100, height: 40, marginLeft: 5, marginRight: 5 }}>Previous</Button>
+                <Button variant="contained" onClick={this.props.onPressNext} style={{ borderRadius: 15, width: 100, height: 40, marginLeft: 5, marginRight: 5 }}>NEXT</Button>
             </div>
         )
     }
