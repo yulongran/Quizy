@@ -11,7 +11,7 @@ class Navbar extends React.Component {
                 <ul>
                     <li><a href="/about">ABOUT</a></li>
                     <li><a href="/category">CATEGORY</a></li>
-                    <li><a class="active" href="/discover">DISCOVER</a></li>
+                    <li><a className="active" href="/discover">DISCOVER</a></li>
                 </ul>
             </nav>
         )

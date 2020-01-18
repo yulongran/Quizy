@@ -16,5 +16,8 @@
     display: flex;  
     flex-wrap: wrap;
     align-content: flex-start;
+}
+.quiz-submit-button{
+    display: flex;
     justify-content: center;
 }

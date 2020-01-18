@@ -23,17 +23,28 @@ class Question extends React.Component {
                 checked: event.target.value,
                 disabled: true,
                 showAnswer: true,
+            }, () => {
+                this.checkAnswered()
             });
         }
         return false;
     };
 
-    checkAnswer = () => {
-        if (this.state.checked == this.props.question.answer) {
-            return { color: 'red' };
+    checkAnswered = () => {
+        if (this.state.checked == this.props.question.correct - 1) {
+            this.props.onQuestionAnswered({
+                questionNumber: this.props.number,
+                questionScore: 0
+            })
         }
-        return { color: 'gray' };
+        else {
+            this.props.onQuestionAnswered({
+                questionNumber: this.props.number,
+                questionScore: 1
+            })
+        }
     }
+
 
     render() {
         const GreenCheckbox = withStyles({
@@ -67,7 +78,7 @@ class Question extends React.Component {
                 <div className="quiz-question-selection">
                     {
                         this.props.question.answers.map((answer, index) => {
-                            return <FormControlLabel
+                            return <FormControlLabel key={answer}
                                 control={
                                     <GreenCheckbox checked={this.state.checked == index} onChange={this.handleChange(index)} value={index}
                                         style={this.state.checked != index ? { color: 'gray' } :

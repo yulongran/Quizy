@@ -4,7 +4,11 @@ export default [
         answers: ['Computer Style Sheets', 'Creative Style Sheets', 'Cascading Style Sheets', 'Colorful Style Sheets'],
         correct: 3
     },
-
+    {
+        question: 'What is the correct HTML for referring to an external style sheet?',
+        answers: ['<style src="mystyle.css">', '<stylesheet>mystyle.css</stylesheet>', '<link rel="stylesheet" type="text/css" href="mystyle.css">'],
+        correct: 3
+    },
     {
         question: 'Where in an HTML document is the correct place to refer to an external style sheet?',
         answers: ['In the <head> section', 'In the <body> section', 'At the end of the document', 'You can\'t refer to an external style sheet'],
@@ -12,7 +16,7 @@ export default [
     },
     {
         question: 'Which HTML tag is used to define an internal style sheet?',
-        answers: ['<style>', '<script>', '<headStyle>', '<css>'],
+        answers: ['<style>', '<script>', '<css>'],
         correct: 1
     },
     {
