@@ -1,0 +1,14 @@
+.main-container {
+    display: 'flex';
+    height: 85vh;
+}
+
+.main-content-children-wrapper {
+    height: 100%;
+}
+
+.main-topbar-container {
+}
+
+.main-footer-container {
+}

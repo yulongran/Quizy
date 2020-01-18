@@ -1,0 +1,20 @@
+.quiz-progress-container{
+    display: flex;
+    flex-direction: column;
+    height: inherit;
+}
+.quiz-progress-header{
+    background-color: lightgray;
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.quiz-progress-tracker{
+    flex:15;
+    padding: 10%;
+    display: flex;  
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+}

@@ -1,5 +1,6 @@
 import React from 'react';
-import { Topbar } from './components';
+import { Topbar, Footer } from './components';
+import "./Main.css";
 
 class Main extends React.Component {
     constructor(props) {
@@ -8,9 +9,16 @@ class Main extends React.Component {
 
     render() {
         return (
-            <div>
-                <Topbar/>
-                {this.props.children}
+            <div className="main-container">
+                <div className="main-topbar-container">
+                    <Topbar/>
+                </div>
+                <div className="main-content-children-wrapper">
+                    {this.props.children}
+                </div>
+                <div className="main-footer-container">
+                    <Footer/>
+                </div>
             </div>
         )
     }

@@ -1,0 +1,15 @@
+.quiz-container{
+    display:flex;
+    height: inherit;
+    width: inherit;
+}
+.quiz-question-container{
+    flex:5.5;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+}
+.quiz-information-container{
+    flex:1;
+    height: inherit;
+}

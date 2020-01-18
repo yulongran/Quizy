@@ -1,0 +1,31 @@
+.quiz-question-wrapper {
+    flex:7;
+    padding: 40px;
+    display: flex;
+    height: inherit;
+    width: inherit;
+    flex-direction: column;
+}
+.quiz-question-placeholder{
+    flex:0.8;
+    height: 1px;
+}
+.quiz-question-number {
+    flex: 1;
+}
+
+.quiz-question-question {
+    flex: 1.5;
+    flex-wrap: wrap;
+}
+
+.quiz-divider {
+    margin-top: 1.8%;
+    margin-bottom: 1.8%;
+}
+
+.quiz-question-selection {
+    flex: 9;
+    display: flex;
+    flex-direction: column;
+}

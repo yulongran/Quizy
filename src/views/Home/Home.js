@@ -3,7 +3,7 @@ import DiscoverLogo from '../../assets/images/download.png';
 import './home.css';
 import {Category, Quiz} from './components';
 
-class Home extends React.Component {
+class HomeView extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -71,4 +71,4 @@ class Home extends React.Component {
 
 
 
-export default Home;
+export default HomeView;

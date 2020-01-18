@@ -12,7 +12,6 @@ const useStyles = makeStyles({
         width: 250,
         marginRight: 10,
         marginLeft: 10,
-        padding:15,
         display:'flex',
     },
     bullet: {
@@ -34,6 +33,7 @@ const useStyles = makeStyles({
         color: '#455358',
     },
     quizContentWrapper:{
+        padding:10,
         height:100,
         display:'flex',
         flexDirection:'column',

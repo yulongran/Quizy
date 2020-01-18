@@ -1,8 +1,8 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import {
-    Home as HomeView,
-    Quiz as QuizView,
+    HomeView,
+    QuizView,
 } from './views/index';
 import { RouteWithLayout } from './components';
 import { Main } from './layouts';

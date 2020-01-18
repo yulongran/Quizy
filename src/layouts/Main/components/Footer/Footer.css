@@ -1,0 +1,17 @@
+.root{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 1%;
+}
+.footer-website-name{
+    color:#586069;
+    flex:1;
+}
+.footer-author-name{
+    color:#586069;
+    flex:1;
+}
