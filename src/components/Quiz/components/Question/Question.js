@@ -6,7 +6,7 @@ import { withStyles } from '@material-ui/core/styles';
 import { Divider, Checkbox, FormControlLabel } from '@material-ui/core';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { addQuestionScore } from '../../../../store/actions/Quiz';
+import { addQuestionScore, showQuizResult } from '../../../../store/actions/Quiz';
 
 
 class Question extends React.Component {
@@ -26,13 +26,13 @@ class Question extends React.Component {
                 disabled: true,
                 showAnswer: true,
             }, () => {
-                this.checkAnswered()
+                this.checkAnswer()
             });
         }
         return false;
     };
 
-    checkAnswered = () => {
+    checkAnswer = () => {
         if (this.state.checked == this.props.question.correct - 1) {
             this.props.addQuestionScore({
                 [this.props.number]: 0
@@ -114,6 +114,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = dispatch => (
     bindActionCreators({
         addQuestionScore,
+        showQuizResult,
     }, dispatch)
 );
 

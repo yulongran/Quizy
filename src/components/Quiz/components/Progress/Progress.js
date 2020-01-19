@@ -4,7 +4,7 @@ import Typography from '@material-ui/core/Typography';
 import { Button } from '@material-ui/core';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { showQuizResult, hideQuizResult} from '../../../../store/actions/Quiz';
+import { showQuizResult, hideQuizResult, backToQuizQuestionIndex} from '../../../../store/actions/Quiz';
 import QuestionAnswerIcon from '@material-ui/icons/QuestionAnswer';
 
 class Progress extends React.Component {
@@ -32,14 +32,11 @@ class Progress extends React.Component {
                 <div className="quiz-progress-tracker">
                     {this.props.quiz.map((quiz, index) => {
                         return <Button key={quiz.question} startIcon={<QuestionAnswerIcon />} style={this.checkQuestionStatus(index)} onClick={() => {
-                            this.props.onPressBackToQuestion(index)
+                            this.props.backToQuizQuestionIndex(index)
                         }}>
                             Question {index + 1}
                         </Button>
                     })}
-                </div>
-                <div className="quiz-submit-button">
-                    <Button variant="outlined" onClick={this.props.showQuizResult} style={{ borderRadius: 15, width: 100, height: 40, marginLeft: 5, marginRight: 5 }}>SUBMIT</Button>
                 </div>
                 <div className="quiz-progress-placeholder">
                 </div>
@@ -58,6 +55,7 @@ const mapDispatchToProps = dispatch => (
     bindActionCreators({
         showQuizResult,
         hideQuizResult,
+        backToQuizQuestionIndex
     }, dispatch)
 );
 

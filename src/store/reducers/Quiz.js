@@ -1,4 +1,9 @@
-import { SHOW_QUIZ_RESULT, HIDE_QUIZ_RESULT, ADD_QUESTION_SCORE, RETAKE_QUIZ, INCREMENT_QUESTION_INDEX, DECREMENT_CURRENT_QUESTION_INDEX } from '../actions/Quiz';
+import {
+    SHOW_QUIZ_RESULT, HIDE_QUIZ_RESULT,
+    ADD_QUESTION_SCORE, RETAKE_QUIZ, INCREMENT_QUESTION_INDEX,
+    DECREMENT_CURRENT_QUESTION_INDEX,
+    BACK_TO_QUIZ_QUESTION_INDEX,
+} from '../actions/Quiz';
 import QuizData from './data';
 
 const initialState = {
@@ -26,6 +31,13 @@ const QuizReducer = (state = initialState, action) => {
                 show_result: 'none',
             }
         case ADD_QUESTION_SCORE:
+            if (Object.keys(state.question_score).length + 1 == state.quiz_data.length) {
+                return {
+                    ...state,
+                    question_score: { ...state.question_score, ...action.score },
+                    show_result: 'block',
+                }
+            }
             return {
                 ...state,
                 question_score: { ...state.question_score, ...action.score },
@@ -55,6 +67,23 @@ const QuizReducer = (state = initialState, action) => {
             return {
                 ...state,
                 current_question_index: state.current_question_index - 1,
+                onStart: onStartCopy,
+                onEnd: onEndCopy,
+            }
+        case BACK_TO_QUIZ_QUESTION_INDEX:
+            if (action.index == 0) {
+                onStartCopy = true;
+                onEndCopy = false;
+            } else if (action.index == state.quiz_data.length - 1) {
+                onStartCopy = false;
+                onEndCopy = true;
+            } else {
+                onStartCopy = false;
+                onEndCopy = false
+            }
+            return {
+                ...state,
+                current_question_index: action.index,
                 onStart: onStartCopy,
                 onEnd: onEndCopy,
             }

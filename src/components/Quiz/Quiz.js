@@ -3,48 +3,11 @@ import './Quiz.css';
 import { Question, Navigation, Progress, ResultModal } from './components';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { incrementCurrentQuestionIndex, decrementCurrentQuestionIndex} from '../../store/actions/Quiz';
 
 class Quiz extends React.Component {
     constructor(props) {
         super(props);
     }
-
-    // onPressNext = () => {
-    //     this.props.incrementCurrentQuestionIndex();
-    //     if (this.state.questionNumber + 1 > 0) {
-    //         this.setState({ onStart: false })
-    //     }
-    //     if (this.state.questionNumber + 1 === this.props.Quiz.quiz_data.length - 1) {
-    //         this.setState({ onEnd: true })
-    //     }
-    // }
-
-    // onPressPrevious = () => {
-    //     this.props.decrementCurrentQuestionIndex();
-    //     if (this.state.questionNumber - 1 === 0) {
-    //         this.setState({ onStart: true })
-    //     }
-    //     if (this.state.questionNumber - 1 < this.props.Quiz.quiz_data.length - 1) {
-    //         this.setState({ onEnd: false })
-    //     }
-    // }
-
-    // onPressBackToQuestion = (number) => {
-    //     this.setState({ questionNumber: number })
-    //     if (number > 0) {
-    //         this.setState({ onStart: false })
-    //     }
-    //     if (number === this.props.Quiz.quiz_data.length - 1) {
-    //         this.setState({ onEnd: true })
-    //     }
-    //     if (number === 0) {
-    //         this.setState({ onStart: true })
-    //     }
-    //     if (number < this.props.Quiz.quiz_data.length - 1) {
-    //         this.setState({ onEnd: false })
-    //     }
-    // }
 
     render() {
         return (
@@ -74,8 +37,6 @@ const mapStateToProps = (state) => {
 };
 const mapDispatchToProps = dispatch => (
     bindActionCreators({
-        incrementCurrentQuestionIndex,
-        decrementCurrentQuestionIndex
     }, dispatch)
 );
 
