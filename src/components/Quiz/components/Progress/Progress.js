@@ -4,7 +4,7 @@ import Typography from '@material-ui/core/Typography';
 import { Button } from '@material-ui/core';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { showQuizResult, hideQuizResult, backToQuizQuestionIndex} from '../../../../store/actions/Quiz';
+import { showQuizResult, hideQuizResult, backToQuizQuestionIndex } from '../../../../store/actions/Quiz';
 import QuestionAnswerIcon from '@material-ui/icons/QuestionAnswer';
 
 class Progress extends React.Component {
@@ -13,8 +13,8 @@ class Progress extends React.Component {
     }
 
     checkQuestionStatus = (index) => {
-        if (typeof this.props.Quiz.question_score[index] !== 'undefined') {
-            if (this.props.Quiz.question_score[index] == 0) {
+        if (typeof this.props.Quiz.question_status[index] !== 'undefined') {
+            if (parseInt(this.props.Quiz.question_status[index].checked)+1 == this.props.Quiz.quiz_data[index].correct) {
                 return { color: 'green', margin: 5 };
             }
             return { color: 'red', margin: 5 };

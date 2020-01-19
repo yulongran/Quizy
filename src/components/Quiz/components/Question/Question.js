@@ -6,7 +6,7 @@ import { withStyles } from '@material-ui/core/styles';
 import { Divider, Checkbox, FormControlLabel } from '@material-ui/core';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { addQuestionScore, showQuizResult } from '../../../../store/actions/Quiz';
+import { showQuizResult, addQuestionStatus } from '../../../../store/actions/Quiz';
 
 
 class Question extends React.Component {
@@ -20,39 +20,40 @@ class Question extends React.Component {
     }
 
     handleChange = index => event => {
-        if (!this.state.disabled) {
-            this.setState({
-                checked: event.target.value,
-                disabled: true,
-                showAnswer: true,
-            }, () => {
-                this.checkAnswer()
-            });
+        if (!this.props.Quiz.question_status[this.props.number]) {
+            this.props.addQuestionStatus({
+                [this.props.number]: {
+                    checked: event.target.value,
+                    disabled: true,
+                    showAnswer: true,
+                    correct: event.target.value == this.props.question.correct - 1,
+                }
+            })
+        }
+        return false
+    }
+
+    checkeQuestionAnswered = (index) => {
+        if (this.props.Quiz.question_status[this.props.number]) {
+            return this.props.Quiz.question_status[this.props.number].checked == index
         }
         return false;
-    };
-
-    checkAnswer = () => {
-        if (this.state.checked == this.props.question.correct - 1) {
-            this.props.addQuestionScore({
-                [this.props.number]: 0
-            })
-        }
-        else {
-            this.props.addQuestionScore({
-                [this.props.number]: 1
-            })
-        }
     }
 
-    restartQuestion = ()=>{
-        this.setState({
-            checked: undefined,
-            disabled: false,
-            showAnswer: false,
-        })
+    getAnswerStyle = index => {
+        if (this.props.Quiz.question_status[this.props.number]) {
+            if (this.props.Quiz.question_status[this.props.number].checked == index) {
+                if(this.props.Quiz.question_status[this.props.number].checked == this.props.question.correct-1){
+                    return { color: 'green' };
+                }
+                else{
+                    return { color: 'red' };
+                }
+            }
+            return {color: 'gray'};
+        }
+        return { color: 'gray' };
     }
-
 
     render() {
         const GreenCheckbox = withStyles({
@@ -88,14 +89,11 @@ class Question extends React.Component {
                         this.props.question.answers.map((answer, index) => {
                             return <FormControlLabel key={answer}
                                 control={
-                                    <GreenCheckbox checked={this.state.checked == index} onChange={this.handleChange(index)} value={index}
-                                        style={this.state.checked != index ? { color: 'gray' } :
-                                            this.state.checked != this.props.question.correct - 1 ? { color: 'red' } : { color: 'green' }} />
+                                    <GreenCheckbox checked={this.checkeQuestionAnswered(index)} onChange={this.handleChange(index)} value={index}
+                                        style={this.getAnswerStyle(index)} />
                                 }
                                 label={`${String.fromCharCode(97 + index).toUpperCase()}. ${answer}`}
-                                style={this.props.question.correct - 1 != this.state.checked && this.state.checked == index ?
-                                    { color: 'red' } :
-                                    this.state.showAnswer && this.props.question.correct - 1 == index ? { color: 'green' } : { color: 'gray' }}
+                                style={this.getAnswerStyle(index)}
                             />
                         })
                     }
@@ -113,8 +111,8 @@ const mapStateToProps = (state) => {
 };
 const mapDispatchToProps = dispatch => (
     bindActionCreators({
-        addQuestionScore,
         showQuizResult,
+        addQuestionStatus,
     }, dispatch)
 );
 

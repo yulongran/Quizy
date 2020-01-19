@@ -28,8 +28,8 @@ class ResultModal extends React.Component {
 
     getNumberOfCorrectQuestion = () => {
         let correct = 0;
-        Object.values(this.props.Quiz.question_score).forEach((question) => {
-            if (question == 0) {
+        Object.values(this.props.Quiz.question_status).forEach((question) => {
+            if (question.correct) {
                 correct++;
             }
         })
