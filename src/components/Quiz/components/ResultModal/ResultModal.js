@@ -10,8 +10,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import ReactMinimalPieChart from 'react-minimal-pie-chart';
-import {HighlightOffIcon} from '@material-ui/icons';
+import { CheckCircle } from '@material-ui/icons';
 
 
 class ResultModal extends React.Component {
@@ -19,7 +18,20 @@ class ResultModal extends React.Component {
         super(props)
     }
 
+    onPressExist = () => {
+        this.props.hideQuizResult();
+    }
 
+    getNumberOfCorrectQuestion = ()=>{
+        let correct = 0;
+        Object.values(this.props.Quiz.question_score).forEach((question)=>{
+            if(question == 0){
+                correct++;
+            }
+        })
+        return correct;
+    }
+    
     render() {
         return (
             <div className="result-modal-container" style={{ display: [this.props.Quiz.show_result] }}>
@@ -31,58 +43,30 @@ class ResultModal extends React.Component {
                                 </Typography>
                         </div>
                         <div className="result-modal-statistics">
-                            <div className="result-modal-statistics-pie-chart">
-                                <ReactMinimalPieChart
-                                    animate={false}
-                                    animationDuration={500}
-                                    animationEasing="ease-out"
-                                    cx={50}
-                                    cy={50}
-                                    data={[
-                                        {
-                                            color: 'green',
-                                            title: 'One',
-                                            value: 9
-                                        },
-                                        {
-                                            color: 'red',
-                                            title: 'One',
-                                            value: 1
-                                        },
-                                    ]}
-                                    label={false}
-                                    labelPosition={50}
-                                    lengthAngle={360}
-                                    lineWidth={100}
-                                    onClick={undefined}
-                                    onMouseOut={undefined}
-                                    onMouseOver={undefined}
-                                    paddingAngle={0}
-                                    radius={40}
-                                    rounded={false}
-                                    startAngle={0}
-                                    viewBoxSize={[
-                                        50,
-                                        50
-                                    ]}
-                                />
-                            </div>
-                            <div>
-                                <HighlightOffIcon/>
-                                <Typography gutterBottom variant="h5" component="h2">
-                                3 incorrect questions
+                            <CheckCircle className="result-modal-statistics-checkedCircle" fontSize="large" />
+                            <div className="result-modal-statistics-correct">
+                                <Typography gutterBottom variant="subtitle1" component="h2" className="result-modal-statistics-message-start">
+                                    Question Correct :
                                 </Typography>
-                                <Typography gutterBottom variant="h5" component="h2">
-                                 7 out of 10 points
+                                <Typography gutterBottom variant="subtitle1" component="h2" className="result-modal-statistics-message-end">
+                                    {this.getNumberOfCorrectQuestion()} questions
+                                </Typography>
+                            </div>
+                            <div className="result-modal-statistics-correct">
+                                <Typography gutterBottom variant="subtitle1" component="h2" className="result-modal-statistics-message-start">
+                                    Your Score :
+                                </Typography>
+                                <Typography gutterBottom variant="subtitle1" component="h2" className="result-modal-statistics-message-end" >
+                                {this.getNumberOfCorrectQuestion()}  out of {this.props.Quiz.quiz_data.length} points
                                 </Typography>
                             </div>
                         </div>
                     </CardContent>
-                    <CardActions>
-                        <Button size="small" color="primary">
+                    <CardActions style={{ alignSelf: 'flex-end' }}>
+                        <Button size="medium" color="primary" variant="outlined">
                             Try Again
                             </Button>
-                        <Button size="small" color="primary">
+                        <Button size="medium" color="primary" variant="outlined" onClick={this.onPressExist}>
                             exist
                             </Button>
                     </CardActions>

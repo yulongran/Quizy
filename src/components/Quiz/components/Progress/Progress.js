@@ -5,6 +5,7 @@ import { Button } from '@material-ui/core';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { showQuizResult, hideQuizResult } from '../../../../store/actions/Quiz';
+import QuestionAnswerIcon from '@material-ui/icons/QuestionAnswer';
 
 const styles = {
     buttonStyle: { margin: 5 },
@@ -17,27 +18,14 @@ class Progress extends React.Component {
         }
     }
 
-    /** https://stackoverflow.com/questions/12462318/find-a-value-in-an-array-of-objects-in-javascript */
-    search(nameKey, myArray) {
-        for (var i = 0; i < myArray.length; i++) {
-            if (myArray[i].questionNumber === nameKey) {
-                return myArray[i];
+    checkQuestionStatus = (index) => {
+        if (typeof this.props.Quiz.question_score[index] !== 'undefined') {
+            if (this.props.Quiz.question_score[index] == 0) {
+                return { color: 'green', margin: 5 };
             }
+            return { color: 'red', margin: 5 };
         }
-    }
-
-    checkQuestionStatus = (questionScore, index) => {
-        questionScore.map(question => {
-            if (question.questionNumber == index) {
-                if (question.questionScore == 0) {
-                    return { backgroundColor: 'green', margin: 5 };
-                }
-                else {
-                    return { backgroundColor: 'red', margin: 5 };
-                }
-            }
-        })
-        return { backgroundColor: 'gray', margin: 5 }
+        return { color: 'gray', margin: 5 }
     }
     render() {
         return (
@@ -49,10 +37,10 @@ class Progress extends React.Component {
                 </div>
                 <div className="quiz-progress-tracker">
                     {this.props.quiz.map((quiz, index) => {
-                        return <Button key={quiz.question} variant="contained" style={this.checkQuestionStatus(this.props.questionScore, index)} onClick={() => {
+                        return <Button key={quiz.question} startIcon={<QuestionAnswerIcon />} style={this.checkQuestionStatus(index)} onClick={() => {
                             this.props.onPressBackToQuestion(index)
                         }}>
-                            {index + 1}
+                            Question {index + 1}
                         </Button>
                     })}
                 </div>

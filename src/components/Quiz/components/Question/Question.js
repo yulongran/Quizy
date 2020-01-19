@@ -4,7 +4,9 @@ import Typography from '@material-ui/core/Typography';
 import { green, red } from '@material-ui/core/colors';
 import { withStyles } from '@material-ui/core/styles';
 import { Divider, Checkbox, FormControlLabel } from '@material-ui/core';
-
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { addQuestionScore } from '../../../../store/actions/Quiz';
 
 
 class Question extends React.Component {
@@ -32,15 +34,13 @@ class Question extends React.Component {
 
     checkAnswered = () => {
         if (this.state.checked == this.props.question.correct - 1) {
-            this.props.onQuestionAnswered({
-                questionNumber: this.props.number,
-                questionScore: 0
+            this.props.addQuestionScore({
+                [this.props.number]: 0
             })
         }
         else {
-            this.props.onQuestionAnswered({
-                questionNumber: this.props.number,
-                questionScore: 1
+            this.props.addQuestionScore({
+                [this.props.number]: 1
             })
         }
     }
@@ -99,4 +99,15 @@ class Question extends React.Component {
 
 
 
-export default Question;
+const mapStateToProps = (state) => {
+    const { Quiz } = state
+    return { Quiz }
+};
+const mapDispatchToProps = dispatch => (
+    bindActionCreators({
+        addQuestionScore,
+    }, dispatch)
+);
+
+export default connect(mapStateToProps, mapDispatchToProps)(Question);
+
