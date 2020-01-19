@@ -45,6 +45,14 @@ class Question extends React.Component {
         }
     }
 
+    restartQuestion = ()=>{
+        this.setState({
+            checked: undefined,
+            disabled: false,
+            showAnswer: false,
+        })
+    }
+
 
     render() {
         const GreenCheckbox = withStyles({

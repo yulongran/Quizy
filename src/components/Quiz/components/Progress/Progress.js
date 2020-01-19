@@ -7,15 +7,9 @@ import { bindActionCreators } from 'redux';
 import { showQuizResult, hideQuizResult } from '../../../../store/actions/Quiz';
 import QuestionAnswerIcon from '@material-ui/icons/QuestionAnswer';
 
-const styles = {
-    buttonStyle: { margin: 5 },
-}
 class Progress extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            onColor: null,
-        }
     }
 
     checkQuestionStatus = (index) => {
