@@ -6,7 +6,12 @@ const initialState = {
     question_score: {},
     quiz_data: QuizData,
     current_question_index: 0,
+    onStart: true,
+    onEnd: false,
 };
+
+let onStartCopy = true;
+let onEndCopy = false;
 
 const QuizReducer = (state = initialState, action) => {
     switch (action.type) {
@@ -28,14 +33,30 @@ const QuizReducer = (state = initialState, action) => {
         case RETAKE_QUIZ:
             return initialState;
         case INCREMENT_QUESTION_INDEX:
-            return{
+            if (state.current_question_index >= 0) {
+                onStartCopy = false;
+            }
+            if (state.current_question_index + 1 == state.quiz_data.length - 1) {
+                onEndCopy = true;
+            }
+            return {
                 ...state,
-                current_question_index: state.current_question_index+1,
+                current_question_index: state.current_question_index + 1,
+                onStart: onStartCopy,
+                onEnd: onEndCopy,
             }
         case DECREMENT_CURRENT_QUESTION_INDEX:
-            return{
+            if (state.current_question_index - 1 == 0) {
+                onStartCopy = true;
+            }
+            if (state.current_question_index - 1 < state.quiz_data.length - 1) {
+                onEndCopy = false;
+            }
+            return {
                 ...state,
-                current_question_index: state.current_question_index-1,
+                current_question_index: state.current_question_index - 1,
+                onStart: onStartCopy,
+                onEnd: onEndCopy,
             }
         default:
             return state;

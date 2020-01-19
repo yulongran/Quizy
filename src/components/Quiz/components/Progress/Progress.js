@@ -4,7 +4,7 @@ import Typography from '@material-ui/core/Typography';
 import { Button } from '@material-ui/core';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { showQuizResult, hideQuizResult } from '../../../../store/actions/Quiz';
+import { showQuizResult, hideQuizResult} from '../../../../store/actions/Quiz';
 import QuestionAnswerIcon from '@material-ui/icons/QuestionAnswer';
 
 class Progress extends React.Component {

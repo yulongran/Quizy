@@ -8,48 +8,43 @@ import { incrementCurrentQuestionIndex, decrementCurrentQuestionIndex} from '../
 class Quiz extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            questionNumber: 0,
-            onStart: true,
-            onEnd: false,
-        }
     }
 
-    onPressNext = () => {
-        this.props.incrementCurrentQuestionIndex();
-        if (this.state.questionNumber + 1 > 0) {
-            this.setState({ onStart: false })
-        }
-        if (this.state.questionNumber + 1 === this.props.Quiz.quiz_data.length - 1) {
-            this.setState({ onEnd: true })
-        }
-    }
+    // onPressNext = () => {
+    //     this.props.incrementCurrentQuestionIndex();
+    //     if (this.state.questionNumber + 1 > 0) {
+    //         this.setState({ onStart: false })
+    //     }
+    //     if (this.state.questionNumber + 1 === this.props.Quiz.quiz_data.length - 1) {
+    //         this.setState({ onEnd: true })
+    //     }
+    // }
 
-    onPressPrevious = () => {
-        this.props.decrementCurrentQuestionIndex();
-        if (this.state.questionNumber - 1 === 0) {
-            this.setState({ onStart: true })
-        }
-        if (this.state.questionNumber - 1 < this.props.Quiz.quiz_data.length - 1) {
-            this.setState({ onEnd: false })
-        }
-    }
+    // onPressPrevious = () => {
+    //     this.props.decrementCurrentQuestionIndex();
+    //     if (this.state.questionNumber - 1 === 0) {
+    //         this.setState({ onStart: true })
+    //     }
+    //     if (this.state.questionNumber - 1 < this.props.Quiz.quiz_data.length - 1) {
+    //         this.setState({ onEnd: false })
+    //     }
+    // }
 
-    onPressBackToQuestion = (number) => {
-        this.setState({ questionNumber: number })
-        if (number > 0) {
-            this.setState({ onStart: false })
-        }
-        if (number === this.props.Quiz.quiz_data.length - 1) {
-            this.setState({ onEnd: true })
-        }
-        if (number === 0) {
-            this.setState({ onStart: true })
-        }
-        if (number < this.props.Quiz.quiz_data.length - 1) {
-            this.setState({ onEnd: false })
-        }
-    }
+    // onPressBackToQuestion = (number) => {
+    //     this.setState({ questionNumber: number })
+    //     if (number > 0) {
+    //         this.setState({ onStart: false })
+    //     }
+    //     if (number === this.props.Quiz.quiz_data.length - 1) {
+    //         this.setState({ onEnd: true })
+    //     }
+    //     if (number === 0) {
+    //         this.setState({ onStart: true })
+    //     }
+    //     if (number < this.props.Quiz.quiz_data.length - 1) {
+    //         this.setState({ onEnd: false })
+    //     }
+    // }
 
     render() {
         return (
@@ -60,10 +55,10 @@ class Quiz extends React.Component {
                             return <Question key={question.question} question={question} number={index} showComponent={index == this.props.Quiz.current_question_index} />
                         })}
                     </div>
-                    <Navigation onPressNext={this.onPressNext} onPressPrevious={this.onPressPrevious} onStart={this.state.onStart} onEnd={this.state.onEnd} />
+                    <Navigation/>
                 </div>
                 <div className="quiz-information-container">
-                    <Progress quiz={this.props.Quiz.quiz_data} onPressBackToQuestion={this.onPressBackToQuestion} />
+                    <Progress quiz={this.props.Quiz.quiz_data}/>
                 </div>
                 <div className="quiz-result-modal-container">
                     <ResultModal />
