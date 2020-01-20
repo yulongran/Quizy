@@ -35,7 +35,7 @@ const QuizReducer = (state = initialState, action) => {
         case INCREMENT_QUESTION_INDEX:
             if (state.current_question_index >= 0) {
                 onStartCopy = false;
-                onEndCopy= false;
+                onEndCopy = false;
             }
             if (state.current_question_index + 1 >= state.quiz_data.length - 1) {
                 onEndCopy = true;

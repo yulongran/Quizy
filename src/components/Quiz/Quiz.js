@@ -18,13 +18,13 @@ class Quiz extends React.Component {
                             return <Question key={question.question} question={question} number={index} showComponent={index == this.props.Quiz.current_question_index} />
                         })}
                     </div>
-                    <Navigation/>
+                    <Navigation />
                 </div>
                 <div className="quiz-information-container">
-                    <Progress quiz={this.props.Quiz.quiz_data}/>
+                    <Progress quiz={this.props.Quiz.quiz_data}  goBack={this.props.goBack}/>
                 </div>
                 <div className="quiz-result-modal-container">
-                    <ResultModal />
+                    <ResultModal goBack={this.props.goBack}/>
                 </div>
             </div>
         )

@@ -20,6 +20,7 @@ class ResultModal extends React.Component {
 
     onPressExist = () => {
         this.props.hideQuizResult();
+        this.props.goBack();
     }
 
     onPressRetake = () => {

@@ -26,7 +26,15 @@
     color: white;
     font-weight: bolder;
 }
-
+.logo-attribution{
+    position: absolute;
+    top:72%;
+    left: 90%;
+    transform: translate(-50%, -270px);
+    font-size: 8px;
+    color: white;
+    font-weight: bolder;
+}
 .discover-image-sub-headline {
     position: absolute;
     top: 50%;

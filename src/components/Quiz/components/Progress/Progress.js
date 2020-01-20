@@ -14,7 +14,7 @@ class Progress extends React.Component {
 
     checkQuestionStatus = (index) => {
         if (typeof this.props.Quiz.question_status[index] !== 'undefined') {
-            if (parseInt(this.props.Quiz.question_status[index].checked)+1 == this.props.Quiz.quiz_data[index].correct) {
+            if (parseInt(this.props.Quiz.question_status[index].checked) + 1 == this.props.Quiz.quiz_data[index].correct) {
                 return { color: 'green', margin: 5 };
             }
             return { color: 'red', margin: 5 };
@@ -25,7 +25,7 @@ class Progress extends React.Component {
         return (
             <div className="quiz-progress-container">
                 <div className="quiz-progress-header">
-                    <Typography variant="subtitle1" style={{color:'white'}}>
+                    <Typography variant="subtitle1" style={{ color: 'white' }}>
                         PROGRESS
                     </Typography>
                 </div>
@@ -37,6 +37,9 @@ class Progress extends React.Component {
                             Question {index + 1}
                         </Button>
                     })}
+                </div>
+                <div className="quiz-progress-exist">
+                    <Button variant="outlined" color="primary" onClick={this.props.goBack}>EXIST</Button>
                 </div>
                 <div className="quiz-progress-placeholder">
                 </div>

@@ -13,10 +13,10 @@ class Footer extends React.Component {
                 <Typography variant="caption" className={"footer-website-name"}>
                     &copy;{' '}
                     2020
-                    QuizGo
+                    Quizy
                 </Typography>
                 <Typography variant="caption" className={"footer-author-name"}>
-                    Author Yulong Ran
+                    Created By Yulong Ran
       </Typography>
             </div>
         )

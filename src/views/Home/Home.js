@@ -35,7 +35,8 @@ class HomeView extends React.Component {
         return (
             <div className={"discover-container"}>
                 <div className={"discover-image-wrapper"}>
-                    <img className={"discover-image"} src={'https://i.udemycdn.com/notices/featured_banner/image/3706edd9-c3c1-4945-ba2e-34e0ba312503.jpg'} />
+                    <img className={"discover-image"} src={require('../../assets/logo.jpg')} />
+                    <div className="logo-attribution">Photo by Taylor Leopold on Unsplash</div>
                     <div className={"discover-image-headline-wrapper"}>
                     <div className={"discover-image-headline"}>Learn Your Way Up</div>
                     <div className={"discover-image-sub-headline"}>You’ll learn more than just the book you read. </div>

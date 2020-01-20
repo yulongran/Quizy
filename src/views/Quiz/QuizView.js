@@ -10,7 +10,7 @@ class QuizView extends React.Component {
     render() {
         return (
             <div className="quizview-container">
-                <Quiz/>
+                <Quiz goBack={this.props.history.goBack}/>
             </div>
         )
     }
