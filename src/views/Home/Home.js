@@ -56,7 +56,7 @@ class HomeView extends React.Component {
                     <div className={"discover-content-category-section-container"}>
                         <p className={"discover-content-category-header"}>Top Quiz</p>
                         <div className={"discover-content-category-list"}>
-                            <Quiz quiz={QUIZ[0]}/>
+                            <Quiz quiz={QUIZ[0]} history={this.props.history}/>
                             <Quiz quiz={QUIZ[1]}/>
                             <Quiz quiz={QUIZ[2]}/>
                             <Quiz quiz={QUIZ[2]}/>

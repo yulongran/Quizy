@@ -25,8 +25,8 @@ class Progress extends React.Component {
         return (
             <div className="quiz-progress-container">
                 <div className="quiz-progress-header">
-                    <Typography variant="h6" color="textSecondary">
-                        Progress
+                    <Typography variant="subtitle1" style={{color:'white'}}>
+                        PROGRESS
                     </Typography>
                 </div>
                 <div className="quiz-progress-tracker">

@@ -4,7 +4,7 @@
     height: inherit;
 }
 .quiz-progress-header{
-    background-color: lightgray;
+    background-color: #121212;
     flex:1;
     display: flex;
     justify-content: center;

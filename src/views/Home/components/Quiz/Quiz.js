@@ -12,7 +12,7 @@ const useStyles = makeStyles({
         width: 250,
         marginRight: 10,
         marginLeft: 10,
-        display:'flex',
+        display: 'flex',
     },
     bullet: {
         display: 'inline-block',
@@ -32,23 +32,26 @@ const useStyles = makeStyles({
     quizAuthor: {
         color: '#455358',
     },
-    quizContentWrapper:{
-        padding:10,
-        height:100,
-        display:'flex',
-        flexDirection:'column',
-        alignItems:'flex-start',
-        justifyContent:'space-between',
+    quizContentWrapper: {
+        padding: 10,
+        height: 100,
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'flex-start',
+        justifyContent: 'space-between',
     },
 });
 
 export default function OutlinedCard(props) {
     const classes = useStyles();
-    const bull = <span className={classes.bullet}>•</span>;
+
+    function onPressQuiz() {
+        props.history.push('/quiz')
+    }
 
     return (
         <Card className={classes.card}>
-            <CardActionArea className={classes.quizContentWrapper}>
+            <CardActionArea className={classes.quizContentWrapper} onClick={onPressQuiz}>
                 <Typography variant="h7" component="h2" className={classes.quizTitle}>
                     {props.quiz.title}
                 </Typography>
