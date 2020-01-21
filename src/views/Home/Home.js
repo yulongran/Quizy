@@ -1,8 +1,8 @@
 import React from 'react'
 import './home.css';
-import { Category} from './components';
+import { Category } from './components';
 import { connect } from 'react-redux';
-import {fetchProgrammingCategoryQuiz} from '../../store/actions/Programming'
+import { fetchProgrammingCategoryQuiz } from '../../store/actions/Programming'
 import { bindActionCreators } from 'redux';
 
 class HomeView extends React.Component {
@@ -10,7 +10,7 @@ class HomeView extends React.Component {
         super(props);
     }
 
-    componentDidMount(){
+    componentDidMount() {
         this.props.fetchProgrammingCategoryQuiz();
     }
 
@@ -26,20 +26,10 @@ class HomeView extends React.Component {
                     </div>
                 </div>
                 <div className={"discover-content-wrapper"}>
-                    <Category name="Programing" data={this.props.Programming.quizes}/>
-                    <Category name="Programing" data={this.props.Programming.quizes}/>
-                    <Category name="Programing" data={this.props.Programming.quizes}/>
-                    <Category name="Programing" data={this.props.Programming.quizes}/>
-                    {/* <div className={"discover-content-category-section-container"}>
-                        <p className={"discover-content-category-header"}>Top Quiz</p>
-                        <div className={"discover-content-category-list"}>
-                            <Quiz quiz={QUIZ[0]} history={this.props.history} />
-                            <Quiz quiz={QUIZ[1]} />
-                            <Quiz quiz={QUIZ[2]} />
-                            <Quiz quiz={QUIZ[2]} />
-                            <Quiz quiz={QUIZ[1]} />
-                        </div>
-                    </div> */}
+                    <Category name="Programing" data={this.props.Programming.quizes} history={this.props.history}/>
+                    <Category name="Programing" data={this.props.Programming.quizes} history={this.props.history}/>
+                    <Category name="Programing" data={this.props.Programming.quizes} history={this.props.history}/>
+                    <Category name="Programing" data={this.props.Programming.quizes} history={this.props.history}/>
                 </div>
             </div>
         )
@@ -53,7 +43,7 @@ const mapStateToProps = (state) => {
 };
 const mapDispatchToProps = dispatch => (
     bindActionCreators({
-       fetchProgrammingCategoryQuiz,
+        fetchProgrammingCategoryQuiz,
     }, dispatch)
 );
 

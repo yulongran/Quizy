@@ -1,5 +1,5 @@
 .quiz-question-wrapper {
-    flex:1;
+    flex:6;
     padding: 40px;
     display: flex;
     height:inherit;
@@ -15,7 +15,7 @@
 }
 
 .quiz-question-question {
-    flex: 1.5;
+    flex: 2;
     flex-wrap: wrap;
 }
 

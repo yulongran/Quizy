@@ -3,6 +3,7 @@ import {
     DECREMENT_CURRENT_QUESTION_INDEX,
     BACK_TO_QUIZ_QUESTION_INDEX,
     ADD_QUESTION_STATUS,
+    LOAD_QUIZ,
 } from '../actions/Quiz';
 import QuizData from './data';
 
@@ -20,6 +21,11 @@ let onEndCopy = false;
 
 const QuizReducer = (state = initialState, action) => {
     switch (action.type) {
+        case LOAD_QUIZ:
+            return {
+                ...state,
+                quiz_data: action.quiz,
+            }
         case SHOW_QUIZ_RESULT:
             return {
                 ...state,

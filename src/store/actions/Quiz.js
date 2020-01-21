@@ -5,6 +5,7 @@ export const INCREMENT_QUESTION_INDEX = "INCREMENT_CURRENT_QUESTION_INDEX";
 export const DECREMENT_CURRENT_QUESTION_INDEX = "DECREMENT_CURRENT_QUESTION_INDEX";
 export const BACK_TO_QUIZ_QUESTION_INDEX = "BACK_TO_QUIZ_QUESTION_INDEX";
 export const ADD_QUESTION_STATUS = "ADD_QUESTION_STATUS";
+export const LOAD_QUIZ = "LOAD_QUIZ";
 
 export const showQuizResult = () => {
     return {
@@ -43,9 +44,16 @@ export const backToQuizQuestionIndex = (index) => {
     }
 }
 
-export const addQuestionStatus = (status)=>{
-    return{
+export const addQuestionStatus = (status) => {
+    return {
         type: ADD_QUESTION_STATUS,
         status: status,
+    }
+}
+
+export const loadQuiz = (quiz) => {
+    return {
+        type: LOAD_QUIZ,
+        quiz: quiz,
     }
 }
