@@ -1,15 +1,17 @@
 .main-container {
     display: 'flex';
     height: 85vh;
+    flex-direction: column;
 }
 
 .main-content-children-wrapper {
-    height: 100%;
+    height: auto;
 }
 
 .main-topbar-container {
+    flex:1,
 }
 
 .main-footer-container {
-    margin-top: 35px;
+    flex:1,
 }

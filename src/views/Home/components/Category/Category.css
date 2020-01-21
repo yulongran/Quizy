@@ -1,0 +1,10 @@
+.discover-content-category-header{
+    color: #29303b;
+    font-weight: bold;
+    font-size: 18px;
+}
+.discover-content-category-list{
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+}

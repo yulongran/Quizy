@@ -5,8 +5,9 @@
     padding-right: 6%;
     flex-direction: column;
 }
-
-.discover-image-wrapper {
+.discover-content-wrapper{
+    display: flex;
+    flex-direction: column;
 }
 
 .discover-image {
@@ -42,13 +43,4 @@
     font-size: 25px;
     color: white;
     font-weight: bolder;
-}
-.discover-content-category-header{
-    color: #29303b;
-    font-weight: bold;
-    font-size: 18px;
-}
-.discover-content-category-list{
-    display: flex;
-    flex-direction: row;
 }
