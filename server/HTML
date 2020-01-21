@@ -1,0 +1,52 @@
+/** 
+* Paste one or more documents here
+*/
+{
+    "_id": {
+        "$oid": "5e2663051c9d440000ec7ce8"
+    },
+    "author": "Anthony",
+    "quiz_name": "HTML Quiz",
+    "quiz":[
+      {
+        "question": "What does HTML stand for?",
+        "answers": ["Hypertext Machine language.", "Hypertext and links markup language.", "Hypertext Markup Language.", "Hightext machine language."],
+        "correct": 3
+      },
+    {
+        "question": "How is document type initialized in HTML5.?",
+        "answers": ["</DOCTYPE HTML>", "</DOCTYPE>", "<!DOCTYPE HTML>", "</DOCTYPE html>"],
+        "correct": 3
+    },
+    {
+        "question": "Which of the following HTML Elements is used for making any text bold ?",
+        "answers": ["<p>", "<i>", "<li>","<b>"],
+        "correct": 4
+    },
+    {
+        "question": "Which of the following HTML element is used for creating an unordered list?",
+        "answers": ["<ui>", "<i>", "<em>", "<ul>"],
+        "correct": 4
+    },
+    {
+        "question": "Which HTML tag is used to define an internal style sheet?",
+        "answers": ["<style>", "<script>", "<css>"],
+        "correct": 1
+    },
+    {
+        "question": "Which HTML attribute is used to define inline styles?",
+        "answers": ["class", "style", "font", "styles"],
+        "correct": 2
+    },
+    {
+        "question": "Which of the following characters indicate closing of a tag?",
+        "answers": [".", "/", "#", "!"],
+        "correct": 2
+    },
+    {
+        "question": "What is the font-size of the h1 heading tag?",
+        "answers": ["3.5 em", "2.17 em", "2 em", "1.5 em"],
+        "correct": 3
+    }
+    ]
+}
