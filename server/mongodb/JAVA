@@ -1,0 +1,43 @@
+/** 
+* Paste one or more documents here
+*/
+{
+    "_id": {
+        "$oid": "5e2662151c9d440000ec7ce8"
+    },
+    "author": "Ryan",
+    "quiz_image":"https://images.unsplash.com/photo-1537432376769-00f5c2f4c8d2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+    "quiz_name": "Java Introduction",
+    "quiz":[
+      {
+        "question": "What is correct syntax for main method of a java class?",
+        "answers": ["public static int main(String[] args)", "public int main(String[] args)", "public static void main(String[] args)", "None of the above."],
+        "correct": 1
+      },
+    {
+        "question": "Can we have multiple classes in same java file?",
+        "answers": ["Yes","No"],
+        "correct": 1
+    },
+    {
+        "question": "What is the default value of Object variable?",
+        "answers": ["undefined", "0", "null","not defined"],
+        "correct": 3
+    },
+    {
+        "question": "What is Abstraction?",
+        "answers": ["Abstraction is a technique to define different methods of same type.", "Abstraction is the ability of an object to take on many forms.", "It refers to the ability to make a class abstract in OOP.", "None of the above."],
+        "correct": 3
+    },
+    {
+        "question": "What kind of variables a class can consist of?",
+        "answers": ["class variables, instance variables", "class variables, local variables, instance variables", "class variables", "class variables, local variables"],
+        "correct": 2
+    },
+    {
+        "question": "Static binding uses which information for binding?",
+        "answers": ["type.", "object.", "Both of the above.", "None of the above."],
+        "correct": 1
+    }
+    ]
+}

@@ -20,7 +20,7 @@ export const fetchLanguageCategoryQuizError = (error) => {
 
 export const fetchLanguageCategoryQuiz = () => {
     return dispatch => {
-        fetch('http://localhost:3000/quiz/category-programming', {
+        fetch('https://quizy-demo.herokuapp.com/quiz/category-language', {
             method: 'GET',
             headers: {
                 Accept: 'application/json',
@@ -28,8 +28,8 @@ export const fetchLanguageCategoryQuiz = () => {
             },
         }).then(res => res.json())
             .then(res => {
-                dispatch(fetchLanguageCategoryQuizSuccess(res.response));
-                return res.response;
+                dispatch(fetchLanguageCategoryQuizSuccess(res));
+                return res;
             }).catch(error => {
                 dispatch(fetchLanguageCategoryQuizError(error))
             })

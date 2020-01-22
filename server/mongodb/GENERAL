@@ -1,0 +1,53 @@
+/** 
+* Paste one or more documents here
+*/
+{
+    "_id": {
+        "$oid": "5e2663121c9d440000ec7ce8"
+    },
+    "author": "David",
+    "quiz_name": "General Programming Challenge",
+    "quiz_image":"https://images.unsplash.com/photo-1526649661456-89c7ed4d00b8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1171&q=80",
+    "quiz":[
+      {
+        "question": "What does HTML stand for?",
+        "answers": ["Hypertext Machine language.", "Hypertext and links markup language.", "Hypertext Markup Language.", "Hightext machine language."],
+        "correct": 3
+      },
+    {
+        "question": "How is document type initialized in HTML5.?",
+        "answers": ["</DOCTYPE HTML>", "</DOCTYPE>", "<!DOCTYPE HTML>", "</DOCTYPE html>"],
+        "correct": 3
+    },
+    {
+        "question": "Can we have multiple classes in same java file?",
+        "answers": ["Yes","No"],
+        "correct": 1
+    },
+    {
+        "question": "Which of the following HTML element is used for creating an unordered list?",
+        "answers": ["<ui>", "<i>", "<em>", "<ul>"],
+        "correct": 4
+    },
+    {
+        "question": "Consider a virtual memory system with FIFO page replacement policy. For an arbitrary page access pattern, increasing the number of page frames in main memory will",
+        "answers": ["Always decrease the number of page faults", "Always increase the number of page faults", "Some times increase the number of page faults","Never affect the number of page faults"],
+        "correct": 3
+    },
+    {
+        "question": "Which of the following requires a device driver?",
+        "answers": ["Register", "Cache", "Main memory", "Disk"],
+        "correct": 4
+    }
+    {
+        "question": "What is Abstraction?",
+        "answers": ["Abstraction is a technique to define different methods of same type.", "Abstraction is the ability of an object to take on many forms.", "It refers to the ability to make a class abstract in OOP.", "None of the above."],
+        "correct": 3
+    },
+    {
+        "question": "What kind of variables a class can consist of?",
+        "answers": ["class variables, instance variables", "class variables, local variables, instance variables", "class variables", "class variables, local variables"],
+        "correct": 2
+    }
+    ]
+}

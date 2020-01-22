@@ -37,7 +37,14 @@ const QuizReducer = (state = initialState, action) => {
                 show_result: 'none',
             }
         case RETAKE_QUIZ:
-            return initialState;
+            return {
+                ...state,
+                show_result: 'none',
+                current_question_index: 0,
+                onStart:true,
+                onEnd:false,
+                question_status: {},
+            };
         case INCREMENT_QUESTION_INDEX:
             if (state.current_question_index >= 0) {
                 onStartCopy = false;

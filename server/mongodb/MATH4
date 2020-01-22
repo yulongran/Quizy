@@ -1,0 +1,43 @@
+/** 
+* Paste one or more documents here
+*/
+{
+    "_id": {
+        "$oid": "2e2632181c9d440000ec7ce8"
+    },
+    "author": "Annie",
+    "quiz_image":"https://images.unsplash.com/photo-1542621334-a254cf47733d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+    "quiz_name": "5th Grade Math",
+    "quiz":[
+        {
+        "question": "Find the sum of 121 + 323 + 31",
+        "answers": ["423", "321", "457", "475"],
+        "correct": 4
+      },
+    {
+        "question": "Subtract 142 from 169",
+        "answers": ["101", "29", "27", "37"],
+        "correct": 3
+    },
+    {
+        "question": "31 times 5 is equal to",
+        "answers": ["101", "123", "151", "240"],
+        "correct": 3
+    },
+    {
+        "question": "101 ÷ 101",
+        "answers": ["231", "135", "110", "202"],
+        "correct": 4
+    },
+    {
+        "question": "Find the product of 198 × 3",
+        "answers": ["38", "2510", "312", "594"],
+        "correct": 4
+    },
+    {
+        "question": "242 + 20 - 21",
+        "answers": ["241", "223", "205", "216"],
+        "correct": 1
+    }
+    ]
+}

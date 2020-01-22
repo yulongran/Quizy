@@ -26,4 +26,4 @@ yarn-error.log*
 # server key
 
 /server/node_modules
-.server/key.js
+/server/key.js

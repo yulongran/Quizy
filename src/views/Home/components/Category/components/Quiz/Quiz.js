@@ -34,14 +34,17 @@ function MediaCard(props) {
             <CardActionArea onClick={onPressQuiz}>
                 <CardMedia
                     className={classes.media}
-                    image={'https://images.unsplash.com/photo-1571498664957-fde285d79857?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=564&q=80'}
+                    image={props.quiz.quiz_image}
                     title="Contemplative Reptile"
                 />
                 <CardContent>
+                <Typography variant="body1" color="textPrimary" component="p">
+                        {props.quiz.quiz_name}
+                    </Typography>
                     <Typography variant="body2" color="textSecondary" component="p">
                         {props.quiz.quiz.length} Questions
                     </Typography>
-                    <Typography gutterBottom variant="body2" component="h2">
+                    <Typography gutterBottom variant="body2" color="textSecondary" component="p">
                         Created By {props.quiz.author}
                     </Typography>
                 </CardContent>

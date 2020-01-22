@@ -1,0 +1,236 @@
+/** 
+* Paste one or more documents here
+*/
+{
+    "_id": {
+        "$oid": "6e2662151c9d440000ec7ce8"
+    },
+    "author": "Jonathan",
+    "quiz_image":"https://images.unsplash.com/photo-1560785496-3c9d27877182?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80",
+    "quiz_name": "Newton's Lab",
+    "quiz":[
+      {
+        "question": "Which law of motion says that it is harder to move something with a larger mass?",
+        "answers": ["First Law", "Second Law", "Third Law", "Forth Law"],
+        "correct": 2
+      },
+    {
+        "question": "What type of scientist studies motion?",
+        "answers": ["Chemist","Geologist","Biologist", "Physicist"],
+        "correct": 4
+    },
+    {
+        "question": "What type of scientist studies solid, liquid, and gaseous matter that constitutes the Earth",
+        "answers": ["Chemist","Geologist","Biologist", "Physicist"],
+        "correct": 2
+    },
+    {
+        "question": "What force resists motion between two objects?",
+        "answers": ["Gravity","Mass", "Inertia", "Friction"],
+        "correct": 4
+    },
+    {
+        "question": "What is acceleration?",
+        "answers": ["The rate of change in motion", "The rate of object slows down", "The direction of the object", "The weight of the object"],
+        "correct": 1
+    },
+    {
+        "question": "What is weight?",
+        "answers": ["The force of gravity on an object", "The mass of the object", "The size of the object", "The speed of the object"],
+        "correct": 1
+    }
+    ]
+}
+
+
+
+
+/** 
+* Paste one or more documents here
+*/
+{
+    "_id": {
+        "$oid": "6e2662121c9d440000ec7ce8"
+    },
+    "author": "Zachary",
+    "quiz_image":"https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+    "quiz_name": "Chemestry's Lab",
+    "quiz":[
+      {
+        "question": "How many electrons in a Hydrogen (H) atom?",
+        "answers": ["One", "Two", "Four", "Eight"],
+        "correct": 1
+      },
+    {
+        "question": "Vmax can be affected without altering Km in which of the following situations?",
+        "answers": ["Increasing the amount of enzyme","Presence of an irreversible inhibitor","Substrate concentration is in excess", "Presence of a competitive inhibitor"],
+        "correct": 1
+    },
+    {
+        "question": "Which one of the following atoms has the largest radius?",
+        "answers": ["O","F", "S", "CI", "NE"],
+        "correct": 4
+    },
+    {
+        "question": "The ion with the smallest diameter is",
+        "answers": ["BR", "CI", "I", "F"],
+        "correct": 1
+    },
+    {
+        "question": "Which of the elements below has the largest electronegativity?",
+        "answers": ["SI", "Mg", "P" , "S", "NA"],
+        "correct": 4
+    },
+    {
+        "question": "Of the choices below, which gives the order for first ionization energies?",
+        "answers": ["Cl > S > Al > Ar > Si", "Ar > Cl > S > Si > Al", "Al > Si > S > Cl > Ar", "Cl > S > Al > Si > Ar"],
+        "correct": 2
+    }
+    ]
+}
+
+
+
+/** 
+* Paste one or more documents here
+*/
+{
+    "_id": {
+        "$oid": "6e4662121c9d440000ec7ce8"
+    },
+    "author": "Roger",
+    "quiz_image":"https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1052&q=80",
+    "quiz_name": "Biology Lab",
+    "quiz":[
+      {
+        "question": "what cancer is caused by a virus",
+        "answers": ["cervical cancer", "lung cancer", "liver cancer", "brain cancer"],
+        "correct": 1
+      },
+    {
+        "question": "When a growing cell undergoes cellular division, each new cell gets",
+        "answers": ["half the DNA from the original cell.","a full copy of all of the DNA in the original cell.","twice as much DNA as the original cell., "a random sample of the DNA in the original cell."],
+        "correct": 2
+    },
+    {
+        "question": "Cells from which structure make blood cells throughout your life?",
+        "answers": ["Liver","Spleen", "Bone marrow", "Spinal cord"],
+        "correct": 3
+    },
+    {
+        "question": "Cytokinesis usually occurs",
+        "answers": ["during interphase.", "after telophase.", "during anaphase.", "at the same time as telophase."],
+        "correct": 4
+    },
+    {
+        "question": "What happens to a cell's surface area to volume ratio as the volume of a cell increases?",
+        "answers": ["The ratio decreases", "The ratio increases", "The ratio stays the same" , "The ratio disappears"],
+        "correct": 1
+    },
+    {
+        "question": "Once a multicellular organism reaches adult size, the cells in its body",
+        "answers": ["stop dividing.", "grow and divide at different rates depending on the type.", "have the same life span between cell divisions.", "undergo cellular division randomly."],
+        "correct": 2
+    }
+    ]
+}
+
+
+/** 
+* Paste one or more documents here
+*/
+{
+    "_id": {
+        "$oid": "6e4662321c9d440000ec7ce8"
+    },
+    "author": "Anger",
+    "quiz_image":"https://images.unsplash.com/photo-1554475901-4538ddfbccc2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1052&q=80",
+    "quiz_name": "Biology Practice Quiz",
+    "quiz":[
+      {
+        "question": "The two main stages of cell division are called",
+        "answers": ["mitosis and interphase", "synthesis and cytokinesis", "the M phase and the S phase", "Mitosis and cytokinesis"],
+        "correct": 4
+      },
+    {
+        "question": "Which of the following is NOT a correct statement about the events of the cell cycle?",
+        "answers": ["Interphase is usually the longest phase.","DNA replicates during the S phase.","Cell division ends with cytokinesis.",  "The size of the cell increases during the G2 phase."],
+        "correct": 4
+    },
+    {
+        "question": "All of the following are problems that growth causes for cells EXCEPT",
+        "answers": ["DNA overload", "excess oxygen", "obtaining enough food", "expelling wastes"],
+        "correct": 2
+    },
+    {
+        "question": "During normal mitotic cell division, a parent cell having eight chromosomes will produce two daughter cells, each containing",
+        "answers": ["2 chromosomes", "4chromosomes", "8 chromosomes", "16 chromosomes"],
+        "correct": 3
+    },
+    {
+        "question": "Which of the following is a phase in the cell cycle?",
+        "answers": ["G1 phase", "G2 phase", "M phase" , "All of the above"],
+        "correct": 4
+    },
+    {
+        "question": "One effect of an internal regulator is that a cell will not begin mitosis until",
+        "answers": ["it becomes too large.", "the cell's growth is stimulated", "it is in physical contact with other cells.", "all its chromosomes have been replicated."],
+        "correct": 4
+    },
+    {
+        "question":"What is the role of the spindle during mitosis?",
+        "answers": ["It helps separate the chromosomes.", "It breaks down the nuclear membrane.", "It duplicates the DNA.", "It makes the chromosomes visible."],
+        "correct" :1
+    },
+        {
+        "question": "One factor common to almost all cancers is",
+        "answers": ["a lack of cyclin.", "a defect in gene p53.", "exposure to tobacco smoke.","exposure to radiation."],
+        "correct": 2
+    },
+    ]
+}
+
+
+/** 
+* Paste one or more documents here
+*/
+{
+    "_id": {
+        "$oid": "6e4662141c9d440000ec7ce8"
+    },
+    "author": "Roger",
+    "quiz_image": "https://images.unsplash.com/photo-1530210124550-912dc1381cb8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+    "quiz_name": "Biology Practice Exam",
+    "quiz":[
+      {
+        "question": "The cell cycle is the",
+        "answers": ["series of events that cells go through as they grow and divide.", "period of time between the birth and the death of a cell.", "time from prophase until cytokinesis.", "time it takes for one cell to undergo mitosis."],
+        "correct": 1
+      },
+    {
+        "question": "The process by which a cell divides into two identical daughter cells is called",
+        "answers": ["cell division","metaphase.","twice as much DNA as the original cell.", "interphase.", "mitosis."],
+        "correct": 1
+    },
+    {
+        "question": "The cell cycle is believed to be controlled by proteins called",
+        "answers": ["spindles","cyclins", "regulators", "centrosomes"],
+        "correct": 2
+    },
+    {
+        "question": "What determines the rate at which food and oxygen in a cell are used up and waste products produced?",
+        "answers": ["The cell's organelles", "The cell's volume.", "The cell's location", "The cell's DNA"],
+        "correct": 2
+    },
+    {
+        "question": "What happens to a cell's surface area to volume ratio as the volume of a cell increases?",
+        "answers": ["The ratio decreases", "The ratio increases", "The ratio stays the same" , "The ratio disappears"],
+        "correct": 1
+    },
+    {
+        "question": "Once a multicellular organism reaches adult size, the cells in its body",
+        "answers": ["stop dividing.", "grow and divide at different rates depending on the type.", "have the same life span between cell divisions.", "undergo cellular division randomly."],
+        "correct": 2
+    }
+    ]
+}

@@ -22,7 +22,7 @@ export const fetchProgrammingCategoryQuizError = (error) => {
 
 export const fetchProgrammingCategoryQuiz = () => {
     return dispatch => {
-        fetch('http://localhost:3000/quiz/category-programming', {
+        fetch('https://quizy-demo.herokuapp.com/quiz/category-programming', {
             method: 'GET',
             headers: {
                 Accept: 'application/json',

@@ -4,7 +4,7 @@ import Typography from '@material-ui/core/Typography';
 import { Button } from '@material-ui/core';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { showQuizResult, hideQuizResult, backToQuizQuestionIndex } from '../../../../store/actions/Quiz';
+import { showQuizResult, hideQuizResult, backToQuizQuestionIndex, retakeQuiz } from '../../../../store/actions/Quiz';
 import QuestionAnswerIcon from '@material-ui/icons/QuestionAnswer';
 
 class Progress extends React.Component {
@@ -21,6 +21,20 @@ class Progress extends React.Component {
         }
         return { color: 'gray', margin: 5 }
     }
+
+    onPressExist = () => {
+        this.props.retakeQuiz();
+        this.props.goBack();
+    }
+
+    componentDidMount() {
+        window.addEventListener("hashchange", this.props.retakeQuiz());
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener("hashchange", this.props.retakeQuiz());
+    }
+
     render() {
         return (
             <div className="quiz-progress-container">
@@ -39,7 +53,7 @@ class Progress extends React.Component {
                     })}
                 </div>
                 <div className="quiz-progress-exist">
-                    <Button variant="outlined" color="primary" onClick={this.props.goBack}>EXIST</Button>
+                    <Button variant="outlined" color="primary" onClick={this.onPressExist}>EXIST</Button>
                 </div>
                 <div className="quiz-progress-placeholder">
                 </div>
@@ -58,7 +72,8 @@ const mapDispatchToProps = dispatch => (
     bindActionCreators({
         showQuizResult,
         hideQuizResult,
-        backToQuizQuestionIndex
+        backToQuizQuestionIndex,
+        retakeQuiz,
     }, dispatch)
 );
 

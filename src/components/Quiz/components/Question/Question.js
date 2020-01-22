@@ -43,14 +43,19 @@ class Question extends React.Component {
     getAnswerStyle = index => {
         if (this.props.Quiz.question_status[this.props.number]) {
             if (this.props.Quiz.question_status[this.props.number].checked == index) {
-                if(this.props.Quiz.question_status[this.props.number].checked == this.props.question.correct-1){
+                if (this.props.Quiz.question_status[this.props.number].checked == this.props.question.correct - 1) {
                     return { color: 'green' };
                 }
-                else{
+                else {
                     return { color: 'red' };
                 }
             }
-            return {color: 'gray'};
+            else if (index == this.props.question.correct - 1) {
+                return { color: 'green' };
+            }
+            else {
+                return { color: 'gray' };
+            }
         }
         return { color: 'gray' };
     }

@@ -1,0 +1,33 @@
+/** 
+* Paste one or more documents here
+*/
+{
+    "_id": {
+        "$oid": "5e2663011c9d440001ec7ce8"
+    },
+    "author": "Brian",
+    "quiz_image": "https://images.unsplash.com/photo-1536148935331-408321065b18?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=633&q=80",
+    "quiz_name": "Operating System",
+    "quiz":[
+      {
+        "question": "Which of the following is NOT a valid deadlock prevention scheme? ",
+        "answers": ["Release all resources before requesting a new resource", "Number the resources uniquely and never request a lower numbered resource than the last one requested.", "Never request a resource after releasing any resource", "Request and all required resources be allocated before execution."],
+        "correct": 3
+      },
+    {
+        "question": "A graphics card has on board memory of 1 MB. Which of the following modes can the card not support?",
+        "answers": ["1600 x 400 resolution with 256 colours on a 17 inch monitor", "1600 x 400 resolution with 16 million colours on a 14 inch monitor", "800 x 400 resolution with 16 million colours on a 17 inch monitor", "800 x 800 resolution with 256 colours on a 14 inch monitor"],
+        "correct": 2
+    },
+    {
+        "question": "Consider a virtual memory system with FIFO page replacement policy. For an arbitrary page access pattern, increasing the number of page frames in main memory will",
+        "answers": ["Always decrease the number of page faults", "Always increase the number of page faults", "Some times increase the number of page faults","Never affect the number of page faults"],
+        "correct": 3
+    },
+    {
+        "question": "Which of the following requires a device driver?",
+        "answers": ["Register", "Cache", "Main memory", "Disk"],
+        "correct": 4
+    }
+    ]
+}

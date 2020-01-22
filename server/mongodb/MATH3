@@ -1,0 +1,43 @@
+/** 
+* Paste one or more documents here
+*/
+{
+    "_id": {
+        "$oid": "3e2632181c9d440000ec7ce8"
+    },
+    "author": "Aaron",
+    "quiz_image":"https://images.unsplash.com/photo-1446329360995-b4642a139973?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=970&q=80",
+    "quiz_name": "2nd Grade Math",
+    "quiz":[
+        {
+        "question": "Find the sum of 23 + 32 + 12",
+        "answers": ["62", "63", "67", "68"],
+        "correct": 3
+      },
+    {
+        "question": "Subtract 23 from 32",
+        "answers": ["10", "9", "8", "7"],
+        "correct": 2
+    },
+    {
+        "question": "3 times 6 is equal to",
+        "answers": ["10", "12", "18", "24"],
+        "correct": 3
+    },
+    {
+        "question": "12 ÷ 2",
+        "answers": ["14", "13", "11", "2"],
+        "correct": 1
+    },
+    {
+        "question": "Find the product of 4 × 3",
+        "answers": ["8", "10", "12", "4"],
+        "correct": 3
+    },
+    {
+        "question": "24 + 2 - 2",
+        "answers": ["24", "22", "20", "21"],
+        "correct": 1
+    }
+    ]
+}

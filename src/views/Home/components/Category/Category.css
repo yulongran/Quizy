@@ -6,5 +6,6 @@
 .discover-content-category-list{
     display: flex;
     flex-direction: row;
+    max-width: 87vw;
     overflow-x: scroll;
 }

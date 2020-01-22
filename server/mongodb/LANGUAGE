@@ -1,0 +1,53 @@
+/** 
+* Paste one or more documents here
+*/
+{
+    "_id": {
+        "$oid": "1e4662321c9d440000ec7ce8"
+    },
+    "author": "Taylor",
+    "quiz_image":"https://images.unsplash.com/photo-1571498664957-fde285d79857?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=564&q=80",
+    "quiz_name": "English Grammer Quiz",
+    "quiz":[
+      {
+        "question": "It was Peter ________ found your lost key.",
+        "answers": ["where","when", "who", "which"],
+        "correct": 3
+      },
+    {
+        "question": "________ is by bus that we go to school every day.",
+        "answers": ["That", "It", "This", "Which"],
+        "correct": 2
+    },
+    {
+        "question": "It was sweet of Nancy ________ a bottle of red wine to the dinner party.",
+        "answers": ["bring", "brought", "bringing", "to bring"],
+        "correct": 4
+    },
+    {
+        "question": "It was the kind woman ________ called an ambulance for you.",
+        "answers": ["whom", "who", "which", "whose"],
+        "correct": 2
+    },
+    {
+        "question": "Zoe sat on the sofa, ________ her favorite program on TV.",
+        "answers": ["watch", "watches", "watching" , "to watch"],
+        "correct": 3
+    },
+    {
+        "question": "The weather turned ________ this afternoon.",
+        "answers": ["coldy", "being coldy", "cold", "being cold"],
+        "correct": 3
+    },
+    {
+        "question":"I went on studying after I ________ dinner.",
+        "answers": ["have had", "have", "had", "has"],
+        "correct" :3
+    },
+        {
+        "question": "To avoid _________ the wrong gifts, people should....",
+        "answers": ["to give", "gave", "giving", "given"],
+        "correct": 3
+    },
+    ]
+}
