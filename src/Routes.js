@@ -21,7 +21,6 @@ class Routes extends React.Component {
                 />
                 <RouteWithLayout exact component={HomeView} layout={Main} path="/discover" />
                 <RouteWithLayout exact component={QuizView} layout={Main} path="/quiz" />
-                <RouteWithLayout exact component={AboutView} layout={Main} path="/about" />
             </Switch>
         )
     }

@@ -9,7 +9,7 @@ class Navbar extends React.Component {
         return (
             <nav>
                 <ul>
-                    <li><a href="/about">ABOUT</a></li>
+                    <li><a href="https://github.com/yulongran/Quizy">ABOUT</a></li>
                     <li><a className="active" href="/discover">DISCOVER</a></li>
                 </ul>
             </nav>
