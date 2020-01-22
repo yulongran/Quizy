@@ -1,69 +1,73 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Quizy - A Quiz Taking System
 
-## Available Scripts
+Live on [Quizy](https://quizy-43c72.firebaseapp.com/).
 
-In the project directory, you can run:
 
-### `yarn start`
+#### The problem and solution
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The majority of the students are relying on textbooks and class notes for studying exams. The absence of a dynamic study tool limits the performance of the students on the exam.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
 
-### `yarn test`
+Quizy is a web-based application that allows users to engage in learning in a unique and fun way. The application provides a platform for students and instructors to create study quiz sets. With Quilzy, the student can study their exam more efficiently and responsively.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+#### System Requirement
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![fontend-backend](https://hackernoon.com/hn-images/1*-NOQtyJAGQ1RNC3iVt_thA.png)
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+* The application uses React framework for font-end developement.
+* Express + NodeJS for backend developement.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![database](https://webassets.mongodb.com/_com_assets/cms/mongodb_logo1-76twgcu2dm.png)
 
-### `yarn eject`
+* The application uses MongoDB as application database.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### Reasoning architectural choices
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+* React is one of the most popular frameworks and makes the development process easier.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+* React uses Component-based architecture, which allows the developer to reuse components and increases the scalability of the application.
 
-## Learn More
+* NodeJS also uses Javascript which makes the development process faster.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* MongoDB is a NoSQL database program. The Quiz information is more suited to NoSQl database compare to the SQL tables.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### Trade Offs
 
-### Code Splitting
+* The target development time is one week; therefore, I choose the most familiar frameworks.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+* The UI uses the Material-UI compoents.
 
-### Analyzing the Bundle Size
+* Lack of time for unit testing.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-### Making a Progressive Web App
+#### Possible Improvement
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+* Perform Unit-Testing
+* Uses Django for backend services.
+* Comes up with my own UI components rather using Material-UI.
+* Break large components into small components to improve readbility and scability. 
 
-### Advanced Configuration
+#### Link to Live Website
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+Live on [Quizy](https://quizy-43c72.firebaseapp.com/).
 
-### Deployment
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+#### Credit
+Credit to following authors on Unsplash for quiz-images:
 
-### `yarn build` fails to minify
+    * Photo by Hannah Wright on Unsplash
+    * Photo by Hal Gatewood on Unsplash
+    * Photo by Hans Reniers on Unsplash
+    * Photo by NASA on Unsplash
+    * Photo by Mathew Schwartz on Unsplash
+    * Photo by Alex Kondratiev on Unsplash
+    * All other images also credit to Unsplash
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-# QuizGo
+Credit to following website for quiz-questions:
+    * W3CShool
+    * TutorialPoint
+    * Quizlet
+
+

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import {
     HomeView,
     QuizView,
@@ -14,6 +14,11 @@ class Routes extends React.Component {
     render() {
         return (
             <Switch>
+                <Redirect
+                    exact
+                    from="/"
+                    to="/discover"
+                />
                 <RouteWithLayout exact component={HomeView} layout={Main} path="/discover" />
                 <RouteWithLayout exact component={QuizView} layout={Main} path="/quiz" />
                 <RouteWithLayout exact component={AboutView} layout={Main} path="/about" />

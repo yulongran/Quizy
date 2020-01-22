@@ -27,3 +27,10 @@ yarn-error.log*
 
 /server/node_modules
 /server/key.js
+
+# firebase
+
+.firebase/
+.firebaserc
+404.html
+firebase.json

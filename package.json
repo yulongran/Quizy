@@ -2,6 +2,7 @@
   "name": "quizgo",
   "version": "0.1.0",
   "private": true,
+  "homepage": ".",
   "dependencies": {
     "@material-ui/core": "^4.8.3",
     "@material-ui/icons": "^4.5.1",
@@ -38,4 +39,5 @@
       "last 1 safari version"
     ]
   }
+  
 }
