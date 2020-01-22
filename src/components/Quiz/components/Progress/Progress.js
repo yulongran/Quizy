@@ -14,7 +14,7 @@ class Progress extends React.Component {
 
     checkQuestionStatus = (index) => {
         if (typeof this.props.Quiz.question_status[index] !== 'undefined') {
-            if (parseInt(this.props.Quiz.question_status[index].checked) + 1 == this.props.Quiz.quiz_data[index].correct) {
+            if (parseInt(this.props.Quiz.question_status[index].checked) + 1 === this.props.Quiz.quiz_data[index].correct) {
                 return { color: 'green', margin: 5 };
             }
             return { color: 'red', margin: 5 };

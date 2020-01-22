@@ -1,7 +1,7 @@
 import React from 'react';
 import './Question.css';
 import Typography from '@material-ui/core/Typography';
-import { green, red } from '@material-ui/core/colors';
+import { green} from '@material-ui/core/colors';
 import { withStyles } from '@material-ui/core/styles';
 import { Divider, Checkbox, FormControlLabel } from '@material-ui/core';
 import { connect } from 'react-redux';
@@ -50,7 +50,7 @@ class Question extends React.Component {
                     return { color: 'red' };
                 }
             }
-            else if (index == this.props.question.correct - 1) {
+            else if (index === this.props.question.correct - 1) {
                 return { color: 'green' };
             }
             else {

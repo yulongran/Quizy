@@ -1,9 +1,8 @@
 import React from 'react';
-import { Route, Switch, Redirect } from 'react-router-dom';
+import { Switch} from 'react-router-dom';
 import {
     HomeView,
     QuizView,
-    AboutView,
 } from './views/index';
 import { RouteWithLayout } from './components';
 import { Main } from './layouts';

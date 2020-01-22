@@ -24,7 +24,7 @@ class HomeView extends React.Component {
         return (
             <div className={"discover-container"}>
                 <div className={"discover-image-wrapper"}>
-                    <img className={"discover-image"} src={require('../../assets/logo.jpg')} />
+                    <img className={"discover-image"} src={require('../../assets/logo.jpg')} alt="reading"/>
                     <div className="logo-attribution">Photo by Taylor Leopold on Unsplash</div>
                     <div className={"discover-image-headline-wrapper"}>
                         <div className={"discover-image-headline"}>Learn Your Way Up</div>
