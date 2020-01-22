@@ -14,12 +14,7 @@ class Routes extends React.Component {
     render() {
         return (
             <Switch>
-                <Redirect
-                    exact
-                    from="/"
-                    to="/discover"
-                />
-                <RouteWithLayout exact component={HomeView} layout={Main} path="/discover" />
+                <RouteWithLayout exact component={HomeView} layout={Main} path="/" />
                 <RouteWithLayout exact component={QuizView} layout={Main} path="/quiz" />
             </Switch>
         )
